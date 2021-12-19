@@ -13,6 +13,8 @@ func home(w http.ResponseWriter, r *http.Request) {
 
 func ServeVideo(w http.ResponseWriter, r *http.Request) {
 
+	log.Println("Bat dau video...")
+
 	maso := r.URL.Query().Get("id") //
 	theloai := r.URL.Query().Get("category")
 	w.Header().Add("Content-Type", "video/mp4")         //khai bao kieu video
